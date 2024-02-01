@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* * Disable up and down arrows on number inputs */ 
+
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;}
+
+hr{
+    color: black;
+    width: 70%;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    padding: 40px;
+     /* background-color: rgb(237, 182, 80); */
+    /* background-color: rgb(211, 182, 127); */
+    /* background-color: rgb(88, 85, 85); */
+    /* color: white; */
+
+}   
+#alarm-container{
+    min-height: 100%;
+    min-width: 500px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    border-radius: 20px;
+    /* background-color: rgb(230, 207, 166);  */
+    /* background-color: rgb(217, 166, 71); */
+    /* background-color: rgb(170, 160, 160); */
+    
+}
+
+/* <!-- ---header-image--- --> */
+#header-img-div{
+    height: 150px;
+    width: 150px;
+    /* background-color: blue; */
+    font-size: 70px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header-img{
+    width: 100%;
+    height: 100%;
+}
+
+/* <!-- ---Current Date & Time---- --> */
+#curr-date, #curr-time{
+    font-size: 40px;
+}
+
+
+/* <!-- -----Add Alarm Button---- --> */
+.add-alarm-cls{
+    background-color: rgb(118, 133, 133);
+    height: 4rem;
+    width: 4rem;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 38px;
+}
+.add-alarm-cls:hover{
+    cursor: pointer;
+}
+.add-alarm-cls:active{
+    background-color: rgb(7, 170, 170);
+}
+
+
+/* ----User Input Area----- */
+
+.set-alarm-cls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+.colon{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 5.5px;
+    padding-right: 2px;
+}
+.userInput{
+    height: 45px;
+    width: 45px;
+    /* padding: 5px; */
+    font-size: 20px;
+    background: none;
+    border: none;
+    outline: none;
+}
+#set-alarm{
+    font-size: 1.2rem;
+    margin-left: 6px;
+    background-color: lightblue;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+#set-alarm:hover{
+    background-color: rgb(137, 172, 183);
+}
+#meridiem-input{
+    width: 50px;
+}
+#meridiem-input::placeholder{
+    font-size: 16px;
+}
+
+/* ----All Alarms--- */
+.alarms{
+ display: flex;
+ /* background-color: aqua; */
+ flex-direction: column;
+ gap: 10px;
+}
+.row{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.alarm-time-div{
+    background-color: rgb(87, 134, 150);
+    padding: 10px 20px;
+    border-radius: 20px;
+    
+}
+.alarm-time{
+    font-size: 22px;
+    color: white;
+}
+.del-btn{
+    font-size: 18px;
+    padding: 2px 10px;
+}
