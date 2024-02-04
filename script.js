@@ -29,6 +29,7 @@ function dateTimeChange(){
     let minutes = String(curr.getMinutes()).padStart(2, "0");
     let seconds = String(curr.getSeconds()).padStart(2, "0");
     let meridiem = hours>=12 ? "PM" : "AM";
+    let hoursTouse = hours; // for updating background and images
 
     //convert to 12 hour format
     hours = hours % 12;
@@ -48,15 +49,15 @@ function dateTimeChange(){
     currentTime.textContent = `${hours} : ${minutes} : ${seconds} ${meridiem}`;
 
     //Set Image Header according to time
-    if(hours>=4 && hours<11){
+    if(hoursTouse>=4 && hoursTouse<11){
         imageHeader.src = 'images/sunrise.png'
         container.style.backgroundColor = "rgb(237, 182, 80)";
         alarmContainer.style.backgroundColor = "rgb(230, 207, 166)";
-    }else if(hours>=11 && hours<16){
+    }else if(hoursTouse>=11 && hoursTouse<16){
         imageHeader.src = 'images/sun.png'
         container.style.backgroundColor = "rgb(237, 182, 80)";
         alarmContainer.style.backgroundColor = "rgb(230, 207, 166)";
-    }else if(hours>=16 && hours<20){
+    }else if(hoursTouse>=16 && hoursTouse<20){
         imageHeader.src = 'images/sunset.png'
         container.style.backgroundColor = "rgb(211, 182, 127)";
         alarmContainer.style.backgroundColor = "rgb(217, 166, 71)";
