@@ -30,7 +30,6 @@ function dateTimeChange(){
     let seconds = String(curr.getSeconds()).padStart(2, "0");
     let meridiem = hours>=12 ? "PM" : "AM";
     let hoursTouse = hours; // for updating background and images
-
     //convert to 12 hour format
     hours = hours % 12;
     hours = String(hours ? hours : 12).padStart(2,"0");
@@ -155,6 +154,3 @@ function alarmAlert(hrs, min, sec, mer){
         console.log("alarm time")
     }
 }
-
-
-
